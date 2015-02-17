@@ -1,0 +1,3 @@
+oceanGame.controller('StaticCtrl',[function(){
+
+}]);
