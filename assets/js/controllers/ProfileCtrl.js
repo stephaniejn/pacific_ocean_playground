@@ -20,8 +20,13 @@ oceanGame.controller('ProfileCtrl', ['$scope','$http','$modal','AlertService','$
    		 	sum += array[i];
 		}
 
-		var average = Math.round((sum / data.length) * 100);
+		var average = Math.round((sum / data.length) * 100) || 0;
 		var averagePerc = (sum / data.length);
+
+		// object = {
+  //       	label: average + '%',
+  //       	percentage: averagePerc
+  //   	}
 
 		$scope.roundProgressData = {
         	label: average + '%',
@@ -40,7 +45,7 @@ oceanGame.controller('ProfileCtrl', ['$scope','$http','$modal','AlertService','$
    		 	sum2 += array[i];
 		}
 
-		average2 = (sum / data.length) * 100;
+		average2 = (sum / data.length) * 100 || 0;
 		averagePerc2 = (sum / data.length);
 
 		$scope.roundProgressData2 = {
