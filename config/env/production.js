@@ -13,7 +13,7 @@
 module.exports = {
 
     connections:{
-        mongoDbServer: {
+        mongoDbServerProd: {
             adapter: 'sails-mongo',
             url: process.env.MONGOSOUP_URL
         }
