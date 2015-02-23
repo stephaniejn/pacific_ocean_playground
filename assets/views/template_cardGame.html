@@ -1,7 +1,10 @@
 
 
 <div class="intro" ng-show="!inProgress">
-	<button id="startGame" ng-click="start()">Start the Game</button>
+	<h1 id="knowledgeTitle"> Guess the Sea Creature</h1>
+	<div class='col-md-3 col-md-offset-5'>
+		<button id="startGame" class="btn btn-primary" ng-click="start()">Start the Game</button>
+	</div>
 </div>
 
 <div class="game-area" ng-show="inProgress">
@@ -15,10 +18,10 @@
 				</label>
 			</li>
 		</ul>
-		<button ng-click="checkAnswer()" ng-show="answerMode">Submit</button>
+		<button ng-click="checkAnswer()" class="btn btn-primary" ng-show="answerMode">Submit</button>
  
                 <div ng-show="!answerMode">
-			<button ng-click="nextQuestion()" class="next-question">Next</button>
+			<button ng-click="nextQuestion()" class="next-question btn btn-primary">Next</button>
 			<span ng-show="correctAns">That is correct!</span>
 			<span ng-show="!correctAns">Sorry, that is an incorrect answer.</span>
 		</div>
@@ -26,11 +29,11 @@
  
 	<div ng-show="gameOver">
 		<h2>game is over</h2>
-		<button ng-click="reset()">Play again</button>
+		<button  class="btn btn-primary" ng-click="reset()">Play again</button>
 	</div>
  
 	<div id="score">
 		Score: {{score}}
 	</div>
-	<button id="saveScore" ng-click="saveScore_Game2()">Save the Score</button>
+	<button id="saveScore" class="btn btn-primary" ng-click="saveScore_Game2()">Save the Score</button>
 </div>

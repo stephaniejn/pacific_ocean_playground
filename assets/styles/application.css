@@ -11,6 +11,12 @@
 	text-align: center;
 
 }
+
+#knowledgeTitle, #question{
+  margin-top: 60px;
+  font-family: "Permanent Marker";
+}
+
 .nav>li>a {
 	color: white !important;
 	padding-left: 50px;
@@ -23,9 +29,9 @@
 	font-family: "Rock Salt";
 }
 
-#play-btn {
+#play-btn, #startGame {
   font-family: 'Rock Salt';
-  font-size: 15px;
+  font-size: 12px;
   letter-spacing: 1px;
   color: white;
   background-color: #0003DC;
@@ -40,12 +46,16 @@
 }
 
 #overlay-text {
-  font-family: "Rock Salt";
-  font-size: 80px;
+  font-family: "Permanent Marker";
+  font-size: 60px;
   font-weight: 700;
   color: #0003DC;
   text-shadow: 2px 3px 8px #fff;
   padding-bottom: 100px;
+}
+
+#startGame{
+  margin-top: 50px;
 }
 
 .overlay {

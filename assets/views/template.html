@@ -1,12 +1,13 @@
-
-
 <div class="intro" ng-show="!inProgress">
+	<h1 id="knowledgeTitle"> Test Your Knowledge of the Pacific Ocean </h1>
+	<div class='col-md-3 col-md-offset-4'>
 	<button id="startGame" ng-click="start()">Start the Game</button>
+	</div>
 </div>
 
 <div class="game-area" ng-show="inProgress">
 	<div ng-show="!gameOver">
-		<h3 id="question">{{question}}</h3>
+		<h2 id="question">{{question}}</h2>
 		<ul id="options">
 			<li ng-repeat="option in options">
 				<label>
@@ -15,10 +16,10 @@
 				</label>
 			</li>
 		</ul>
-		<button ng-click="checkAnswer()" ng-show="answerMode">Submit</button>
+		<button ng-click="checkAnswer()" class="btn btn-primary" ng-show="answerMode">Submit</button>
  
-                <div ng-show="!answerMode">
-			<button ng-click="nextQuestion()" class="next-question">Next</button>
+   		<div ng-show="!answerMode">
+			<button ng-click="nextQuestion()" class="btn btn-primary next-question">Next</button>
 			<span ng-show="correctAns">That is correct!</span>
 			<span ng-show="!correctAns">Sorry, that is an incorrect answer.</span>
 		</div>
@@ -32,5 +33,5 @@
 	<div id="score">
 		Score: {{score}}
 	</div>
-	<button id="saveScore" ng-click="saveScore()">Save the Score</button>
+	<button id="saveScore" class="btn btn-primary" ng-click="saveScore()">Save the Score</button>
 </div>
