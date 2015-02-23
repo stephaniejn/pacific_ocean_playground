@@ -1,4 +1,4 @@
-var oceanGame = angular.module('OceanGame', ['ui.bootstrap', 'ngRoute']);
+var oceanGame = angular.module('OceanGame', ['ui.bootstrap', 'ngRoute', 'angular.directives-round-progress']);
 
 oceanGame.config(['$routeProvider','$locationProvider', function($routeProvider, $locationProvider){
 // no more #!
@@ -20,6 +20,14 @@ oceanGame.config(['$routeProvider','$locationProvider', function($routeProvider,
 	.when('/profile',{
 		templateUrl: '/views/profile.html',
 		controller: 'ProfileCtrl'
+	})
+	.when('/play',{
+		templateUrl: '/views/play.html',
+		controller: 'GameCtrl'
+	})
+	.when('/cardgame',{
+		templateUrl: '/views/cardgame.html',
+		controller: 'GameCtrl'
 	})
 }]);
 

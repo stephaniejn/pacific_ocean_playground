@@ -11,8 +11,14 @@ module.exports = {
 
   attributes: {
   	userName:{
-  		type:'string'
+  		type:'string',
+      required:true,
+      unique:true
   	},
+    firstName:{
+      type:'string',
+      required:true
+    },
   	email:{
   		type:'email',
   		required:true,
@@ -22,16 +28,25 @@ module.exports = {
   		type:'string',
   		required:true
   	},
-  	 scores:{
-            collection: 'score',
-            via: 'player'
-        },
+    farm:{
+      type:'string'
+    },
+    server:{
+      type:'string'
+    },
+    secret:{
+      type:'string'
+    },
+  	scores:{
+      collection: 'score',
+      via: 'player'
+    }
+  },
      toJSON: function(){
       var userObj = this.toObject();
       delete userObj.password;
       return userObj
-    }
-  },
+    },
   beforeCreate:function(values,cb){
   	bcrypt.hash(values.password,10,function(err,hash){
   		if(err) return cb(err);
@@ -40,4 +55,5 @@ module.exports = {
   	})
   }
 };
+
 

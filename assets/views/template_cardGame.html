@@ -6,7 +6,7 @@
 
 <div class="game-area" ng-show="inProgress">
 	<div ng-show="!gameOver">
-		<h3 id="question">{{question}}</h3>
+		<h3 id="question"><img src="{{question}}"></h3>
 		<ul id="options">
 			<li ng-repeat="option in options">
 				<label>
@@ -32,5 +32,5 @@
 	<div id="score">
 		Score: {{score}}
 	</div>
-	<button id="saveScore" ng-click="saveScore()">Save the Score</button>
+	<button id="saveScore" ng-click="saveScore_Game2()">Save the Score</button>
 </div>

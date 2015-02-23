@@ -1,8 +1,52 @@
-<div class ="row">
-	<div class= "col-sm-8"> 
-	I'm the profile page
-			<p>{{currentUser.email}}</p>
-			<p>{{currentUser.userName}}</p>
+<alerts></alerts>
+<h2 style="text-align:center"> Welcome to Your Profile</h2>
+<img ng-src= "https://farm{{currentUser.farm}}.staticflickr.com/{{currentUser.server}}/{{currentUser.urlId}}_{{currentUser.secret}}_n.jpg">
+
+<h4>Quiz</h4>
+ <div ang:round:progress data-round-progress-model="roundProgressData"
+    data-round-progress-width="250"
+    data-round-progress-height="250"
+    data-round-progress-outer-circle-width="20"
+    data-round-progress-inner-circle-width="5"
+    data-round-progress-outer-circle-radius="100"
+    data-round-progress-inner-circle-radius="70"
+    data-round-progress-label-font="25pt Rock Salt"
+    data-round-progress-outer-circle-background-color="#505769"
+    data-round-progress-outer-circle-foreground-color="#12eeb9"
+    data-round-progress-inner-circle-color="#505769"
+    data-round-progress-label-color="black">
+</div>
+
+ <div ang:round:progress data-round-progress-model="roundProgressData2"
+    data-round-progress-width="250"
+    data-round-progress-height="250"
+    data-round-progress-outer-circle-width="20"
+    data-round-progress-inner-circle-width="5"
+    data-round-progress-outer-circle-radius="100"
+    data-round-progress-inner-circle-radius="70"
+    data-round-progress-label-font="25pt Rock Salt"
+    data-round-progress-outer-circle-background-color="#505769"
+    data-round-progress-outer-circle-foreground-color="#12eeb9"
+    data-round-progress-inner-circle-color="#505769"
+    data-round-progress-label-color="black">
+</div>
+
+<div class="container">
+	<div class ="row">
+		<div class= "col-sm-8"> 
+			<ul>
+				<li><strong>Name</strong>{{currentUser.firstName}}</li>
+				<li><strong>User Name</strong>{{currentUser.userName}}</li>
+				<li><strong>Email</strong>{{currentUser.email}}</li>
+				{{scoreAverage}}
+				<!-- {{score_game2}} -->
+			</ul>
+				<input type="button" class="btn btn-primary" value="Choose your avatar" ng-click="avatar()"> 
+			<div ng-show="showAvatar">
+			<img ng-src= "https://farm{{farm}}.staticflickr.com/{{server}}/{{urlId}}_{{secret}}_n.jpg">
+			</div>
+			<button ng-click="save()" class="btn btn-primary">Save</button>
 		</div>
 	</div>
 </div>
+

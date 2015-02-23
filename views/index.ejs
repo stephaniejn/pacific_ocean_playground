@@ -15,11 +15,9 @@
 
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div collapse="navCollapsed" class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				<ul class="nav navbar-nav">
-					<li ng-class="{active:isActive('/about')}"><a href="/about">About</a></li>
-					<li ng-show="currentUser"><a href="/profile" ng-click="profile()">Profile</a></li>
-				</ul>
 				<ul class="nav navbar-nav navbar-right">
+					<li><a href="/about">About</a></li>
+					<li ng-show="currentUser"><a href="/profile" ng-click="profile()">Profile</a></li>
 					<li ng-hide="currentUser"><a ng-click="showLogin()">Login</a></li>
 					<li ng-hide="currentUser"><a ng-click="showSignup()">Signup</a></li>
 					<li><a>{{currentUser.userName}}</a></li>
@@ -28,8 +26,6 @@
 			</div><!-- /.navbar-collapse -->
 		</div><!-- /.container-fluid -->
 	</nav>
-
-	<div class = "container">
-		<ng-view></ng-view>
-	</div>
+	<ng-view></ng-view>
 </div>
+
