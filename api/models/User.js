@@ -40,13 +40,17 @@ module.exports = {
   	scores:{
       collection: 'score',
       via: 'player'
-    }
-  },
+    },
+    'scores2':{
+      collection: 'score_game2',
+      via: 'player'
+    },
      toJSON: function(){
       var userObj = this.toObject();
       delete userObj.password;
       return userObj
-    },
+    }
+  },
   beforeCreate:function(values,cb){
   	bcrypt.hash(values.password,10,function(err,hash){
   		if(err) return cb(err);

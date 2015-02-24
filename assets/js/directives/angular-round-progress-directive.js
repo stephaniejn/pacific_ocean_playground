@@ -30,6 +30,8 @@ angular.module('angular.directives-round-progress', []).directive('angRoundProgr
         pre: function preLink(scope, instanceElement, instanceAttributes, controller) {
           var expression = canvas.getAttribute('data-round-progress-model');
           scope.$watch(expression, function (newValue, oldValue) {
+            if(!angular.isObject(newValue) || newValue == oldValue) return;
+
             // Create the content of the canvas
             var ctx = canvas.getContext('2d');
             ctx.clearRect(0, 0, width, height);

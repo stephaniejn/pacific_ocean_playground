@@ -11,17 +11,17 @@ oceanGame.controller('ProfileCtrl', ['$scope','$http','$modal','AlertService','$
 	})
 
 	var self=this;
-	var array = [];
-	var sum = 0;
-	$http.get('/api/score')
+
+	$http.get('/api/user/'+UserService.currentUser.id+'/scores')
 	.success(function(data){
+		var sum = 0;
 		for( var i = 0; i<data.length; i++ ){
-			array.push(data[i].score);
-   		 	sum += array[i];
+   		 	sum += data[i].score;
 		}
 
-		var average = Math.round((sum / data.length) * 100) || 0;
-		var averagePerc = (sum / data.length);
+		var averagePerc = data.length > 0 ? (sum / (data.length*5)) : 0;
+		var average = Math.round(averagePerc * 100)
+
 
 		// object = {
   //       	label: average + '%',
@@ -36,21 +36,20 @@ oceanGame.controller('ProfileCtrl', ['$scope','$http','$modal','AlertService','$
 	})
 
 	var self=this;
-	var array2 = [];
-	var sum2 = 0;
-	$http.get('/api/score_game2')
+	
+	$http.get('/api/user/'+UserService.currentUser.id+'/scores2')
 	.success(function(data){
+		var sum = 0;
 		for( var i = 0; i<data.length; i++ ){
-			array2.push(data[i].score);
-   		 	sum2 += array[i];
+   		 	sum += data[i].score;
 		}
 
-		average2 = (sum / data.length) * 100 || 0;
-		averagePerc2 = (sum / data.length);
+		var averagePerc = data.length > 0 ? (sum / (data.length*5)) : 0;
+		var average = Math.round(averagePerc * 100)
 
 		$scope.roundProgressData2 = {
-        	label: average2 + '%',
-        	percentage: averagePerc2
+        	label: average + '%',
+        	percentage: averagePerc
     	}
 
 	})

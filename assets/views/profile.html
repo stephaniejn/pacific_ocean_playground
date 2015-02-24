@@ -1,36 +1,38 @@
+
 <alerts></alerts>
-<h2 style="text-align:center"> Welcome to Your Profile</h2>
-<br> <br>
+<h1 id="profile-header" style="text-align:center"> Hey {{currentUser.firstName}}! </h1> 
 <div class="container">
     <div class ="row">
         <div class="col-md-4">
+         <h2>Your Deets</h2>
+     </div>
+     <div class="col-md-4 col-md-offset-3">
+        <h2>Your Progress</h2>
+    </div>
+
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <p><strong>User Name: </strong>{{currentUser.userName}}</p>
+        <p id="email"><strong>Email:</strong>{{currentUser.email}}</p>
+        {{scoreAverage}}
+        <div ng-show="showAvatar">
+            <img ng-src= "https://farm{{farm}}.staticflickr.com/{{server}}/{{urlId}}_{{secret}}_n.jpg">
+        </div>
+        <div ng-hide="showAvatar">
             <img src= "https://farm{{currentUser.farm}}.staticflickr.com/{{currentUser.server}}/{{currentUser.urlId}}_{{currentUser.secret}}_n.jpg">
-            <br> <br>
-                    <input type="button" class="btn btn-primary" value="Change Avatar" ng-click="avatar()"> 
-                    <p> Click through till you find an avatar you like </p>
-            <br> <br>
-            <div ng-show="showAvatar">
-                <img ng-src= "https://farm{{farm}}.staticflickr.com/{{server}}/{{urlId}}_{{secret}}_n.jpg">
-            </div>
-            <br>
-        <button ng-click="save()" class="btn btn-primary">Save Avatar</button>
         </div>
-
-        <div class="col-md-2">
-         <ul>
-            <li><strong>Name</strong>{{currentUser.firstName}}</li>
-            <li><strong>User Name</strong>{{currentUser.userName}}</li>
-            <li><strong>Email</strong>{{currentUser.email}}</li>
-            {{scoreAverage}}
-            <!-- {{score_game2}} -->
-        </ul>
+        <input type="button" id="change-button" class="btn btn-primary" value="Change Avatar" ng-click="avatar()"> 
+        <div ng-show="showAvatar">
+        <button ng-click="save()" class="btn btn-primary" id="save-button">Save Avatar</button>
+            <p> Click until you find an avatar you like! </p>
         </div>
+    </div>
 
+    <div class="col-md-3 col-md-offset-2">
 
- <div class="col-md-4 col-md-offset-2">
-
-    <h4>Knowledge Quiz</h4>
-    <div ang:round:progress data-round-progress-model="roundProgressData"
+        <h3>Knowledge Quiz</h3>
+        <div ang:round:progress data-round-progress-model="roundProgressData"
         data-round-progress-width="250"
         data-round-progress-height="250"
         data-round-progress-outer-circle-width="20"
@@ -43,23 +45,25 @@
         data-round-progress-inner-circle-color="#505769"
         data-round-progress-label-color="black">
     </div>
-
-    <h4>Guess the Creature</h4>
+</div>
+<div class="col-md-3">
+    <h3>Guess the Creature</h3>
     <div ang:round:progress data-round-progress-model="roundProgressData2"
-        data-round-progress-width="250"
-        data-round-progress-height="250"
-        data-round-progress-outer-circle-width="20"
-        data-round-progress-inner-circle-width="5"
-        data-round-progress-outer-circle-radius="100"
-        data-round-progress-inner-circle-radius="70"
-        data-round-progress-label-font="25pt Rock Salt"
-        data-round-progress-outer-circle-background-color="#505769"
-        data-round-progress-outer-circle-foreground-color="#12eeb9"
-        data-round-progress-inner-circle-color="#505769"
-        data-round-progress-label-color="black">
-    </div>
-    </div>
+    data-round-progress-width="250"
+    data-round-progress-height="250"
+    data-round-progress-outer-circle-width="20"
+    data-round-progress-inner-circle-width="5"
+    data-round-progress-outer-circle-radius="100"
+    data-round-progress-inner-circle-radius="70"
+    data-round-progress-label-font="25pt Rock Salt"
+    data-round-progress-outer-circle-background-color="#505769"
+    data-round-progress-outer-circle-foreground-color="#12eeb9"
+    data-round-progress-inner-circle-color="#505769"
+    data-round-progress-label-color="black">
+</div>
+</div>
 
 </div>
 </div>
+
 

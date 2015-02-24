@@ -1,35 +1,11 @@
+/*Home Page*/
+
 #background{
 	max-width: 100%;
 	height: auto;
 }
-.navbar{
-	margin: 0px;
-	background-color: #0003DC;
-	border: 0;
-	border-radius: 0;
-	min-height: 60px;
-	text-align: center;
 
-}
-
-#knowledgeTitle, #question{
-  margin-top: 60px;
-  font-family: "Permanent Marker";
-}
-
-.nav>li>a {
-	color: white !important;
-	padding-left: 50px;
-	font-size: 16px;
-	font-family: "Rock Salt";
-}
-
-.navbar-brand{
-	color: white !important;
-	font-family: "Rock Salt";
-}
-
-#play-btn, #startGame {
+.play-btn, #startGame {
   font-family: 'Rock Salt';
   font-size: 12px;
   letter-spacing: 1px;
@@ -51,6 +27,7 @@
   font-weight: 700;
   color: #0003DC;
   text-shadow: 2px 3px 8px #fff;
+  padding-top: 50px;
   padding-bottom: 100px;
 }
 
@@ -68,33 +45,116 @@
   text-align:center;
 }
 
-/*Temporary */
-#About{
-	background-color: #0003DC;
+#about-home{
+  background-color: #0003DC;
   padding-top: 30px;
   padding-bottom: 30px;
   color: white;
-  font-family: "Special Elite cursive";
-  font-size: 16px;
+}
+
+#aboutTitle-home{
+  padding-bottom: 40px;
+}
+
+/*Navbar */
+.navbar{
+	margin: 0px;
+	background-color: #0003DC;
+	border: 0;
+	border-radius: 0;
+	min-height: 80px;
+	text-align: center;
 
 }
 
-#aboutTitle{
-  padding-bottom: 10px;
+#second-dolphin{
+  padding-left: 5px;
 }
 
-h1, h2, h3{
+.navbar-brand{
+  color: white !important;
   font-family: "Rock Salt";
-  text-align: center;
+  font-size: 16px;
+  padding-top: 5px;
+  padding-left: 40px;
 }
 
-#aboutPage{
+.nav>li>a {
+  color: white !important;
+  padding-left: 50px;
+  padding-top: 25px;
+  font-size: 18px;
+  font-family: "Rock Salt";
+}
+
+#image
+{    
+    height: 65px;
+    width: auto;
+}
+
+/*Games*/
+
+#knowledgeTitle, #question{
+  margin-top: 60px;
+  font-family: "Permanent Marker";
+}
+
+
+/*About Page*/
+
+#about-page{
   padding-bottom: 30px;
 }
 
 #Stephanie-photo{
   max-height: 300px;
   max-width: 200px;
+}
+
+/*Profile Page */
+
+.row{
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+#profile-header{
+  font-family: "Permanent Marker";
+  font-size: 60px;
+  margin-top: 45px;
+}
+
+#save-button{
+  float: right;
+}
+
+#email, #change-button{
+  margin-bottom: 20px;
+}
+
+#change-button{
+  margin-top: 20px;
+}
+
+/*Headers & Body */
+
+h1, h2{
+  font-family: "Rock Salt";
+  text-align: center;
+}
+
+h3{
+  font-family: "Special Elite";
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+body{
+  font-size: 18px;
+  background-color: #2881E2;
+  color: black;
+  font-family: "Special Elite"
 }
 
 
