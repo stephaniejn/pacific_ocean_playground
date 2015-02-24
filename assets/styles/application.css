@@ -134,6 +134,11 @@
 
 /*Games*/
 
+#score-text{
+  font-family: "Rock Salt"
+  
+}
+
 #knowledgeTitle{
   margin-top: 60px;
   font-family: "Permanent Marker";

@@ -24,7 +24,7 @@
 		</div>
 		<div class="row">
 			<div class="col-md-2" id="score">
-					<h3> Score: {{score}} </h3>
+					<h3 id="score-text"> Score: {{score}} </h3>
 					<span class="correct-text" ng-show="!answerMode && correctAns">Correct! Good job!</span>
 					<span class="incorrect-text" ng-show="!answerMode && !correctAns">Incorrect, better luck next time!</span>
 			</div>
@@ -39,6 +39,6 @@
 </div>
  
 <div class="text-center" ng-show="gameOver && inProgress">
-		<h2>Game Finished! Play again?</h2>
+		<h2>Game Finished! Play again?<img class="animated infinite tada" id="image" src="/images/goldfish.png"><img class="animated infinite tada" id="image" src="/images/goldfish.png"><img class="animated infinite tada" id="image" src="/images/goldfish.png"></h2>
 		<img ng-click="reset()" class="go-image" ng-click="start()" src="/images/reset.png"/>
 </div>

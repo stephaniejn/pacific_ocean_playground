@@ -18,9 +18,9 @@ oceanGame.controller('GameCtrl', ['$scope','$http','$modal','AlertService','$loc
 			// console.log($scope.currentUser)
 			$http.post('/api/score', scoreData)
 			.success(function(data){
-				AlertService.add('success','Your score has been saved');
+				// AlertService.add('success','Your score has been saved');
 			}).error(function(err){    
-				AlertService.add('danger', "There was an error with the score - please try again");
+				// AlertService.add('danger', "There was an error with the score - please try again");
 			})
 		}
 	}
@@ -40,9 +40,9 @@ oceanGame.controller('GameCtrl', ['$scope','$http','$modal','AlertService','$loc
 			// console.log($scope.currentUser)
 			$http.post('/api/score_game2', scoreData)
 			.success(function(data){
-				AlertService.add('success','Your score has been saved');
+				// AlertService.add('success','Your score has been saved');
 			}).error(function(err){    
-				AlertService.add('danger', "There was an error with the score - please try again");
+				// AlertService.add('danger', "There was an error with the score - please try again");
 			})
 		}
 	}
