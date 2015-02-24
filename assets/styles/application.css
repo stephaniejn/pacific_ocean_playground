@@ -6,6 +6,10 @@
   border: 0;
 }
 
+.modal-body{
+  font-size: 200px !important;
+}
+
 .semi-transparent-button {
   display: inline-block;
   font-size: 35px;
@@ -84,11 +88,7 @@
 
 /*Navbar */
 .auth-label{
-  font-size: 18px !important;
-}
-
-#signup-label{
-  font-size: 18px;
+  font-size: 18px
 }
 
 .navbar{
