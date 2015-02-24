@@ -83,6 +83,10 @@
 }
 
 /*Navbar */
+.auth-label{
+  font-size: 18px;
+}
+
 .navbar{
 	margin: 0px;
 	background-color: #0003DC;
