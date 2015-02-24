@@ -22,7 +22,7 @@ oceanGame.factory('cardgameFactory', function() {
 		},
 		{	
 			question: "https://farm3.staticflickr.com/2083/2148733069_d550ba9890_n.jpg",
-			options: ["Electic Ray", "Eel", "Manta Ray", "Jellyfish"],
+			options: ["Electric Ray", "Eel", "Manta Ray", "Jellyfish"],
 			answer: 2
 		}
 	];

@@ -1,39 +1,45 @@
 
-
 <div class="intro" ng-show="!inProgress">
-	<h1 id="knowledgeTitle"> Guess the Sea Creature</h1>
+	<h1 id="knowledgeTitle"> It's Time to Guess the Sea Creature</h1>
 	<div class='col-md-3 col-md-offset-5'>
-		<button id="startGame" class="btn btn-primary" ng-click="start()">Start the Game</button>
+		<img class="go-image" ng-click="start()" src="/images/go.png"/>
 	</div>
 </div>
 
 <div class="game-area" ng-show="inProgress">
 	<div ng-show="!gameOver">
-		<h3 id="question"><img src="{{question}}"></h3>
-		<ul id="options">
-			<li ng-repeat="option in options">
-				<label>
-					<input type="radio" name="answer" value="{{option}}" ng-model="value"  ng-change='newValue(value)'>
-					{{option}}
-				</label>
-			</li>
-		</ul>
-		<button ng-click="checkAnswer()" class="btn btn-primary" ng-show="answerMode">Submit</button>
- 
-                <div ng-show="!answerMode">
-			<button ng-click="nextQuestion()" class="next-question btn btn-primary">Next</button>
-			<span ng-show="correctAns">That is correct!</span>
-			<span ng-show="!correctAns">Sorry, that is an incorrect answer.</span>
+		<div class="row">
+			<h2 class="question"><img id="question-image" src="{{question}}"></h2>
+		</div>
+		<div class="row">
+			<ul id="options">
+				<div class="col-md-3 text-center" ng-repeat="option in options">
+					<label>
+						<input type="radio" name="answer" value="{{option}}" ng-model="value"  ng-change='newValue(value)'>
+						{{option}}
+						<img id="image" src="/images/starfish.png">
+					</label>
+				</div>
+			</ul>
+		</div>
+		<div class="row">
+			<div class="col-md-2" id="score">
+					<h3> Score: {{score}} </h3>
+					<span class="correct-text" ng-show="!answerMode && correctAns">Correct! Good job!</span>
+					<span class="incorrect-text" ng-show="!answerMode && !correctAns">Incorrect, better luck next time!</span>
+			</div>
+			<div class="col-md-6 col-md-offset-1 text-center" ng-show="answerMode" >
+				<img ng-click="checkAnswer()" class="submit-image" ng-click="start()" src="/images/submit.png"/>
+			</div>
+			<div class="col-md-6 col-md-offset-1 text-center" ng-show="!answerMode">
+				<img class="submit-image"  ng-click="nextQuestion(); saveScore2();" src="/images/next.png"/>
+			</div>
 		</div>
 	</div>
- 
-	<div ng-show="gameOver">
-		<h2>game is over</h2>
-		<button  class="btn btn-primary" ng-click="reset()">Play again</button>
-	</div>
- 
-	<div id="score">
-		Score: {{score}}
-	</div>
-	<button id="saveScore" class="btn btn-primary" ng-click="saveScore_Game2()">Save the Score</button>
 </div>
+ 
+<div class="text-center" ng-show="gameOver && inProgress">
+		<h2>Game Finished! Play again?</h2>
+		<img ng-click="reset()" class="go-image" ng-click="start()" src="/images/reset.png"/>
+</div>
+

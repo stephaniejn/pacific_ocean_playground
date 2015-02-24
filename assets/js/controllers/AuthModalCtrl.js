@@ -1,5 +1,5 @@
 oceanGame.controller('AuthModalCtrl', ['$scope', 'UserService', '$http', '$modalInstance', 'AlertService', function($scope, UserService, $http, $modalInstance,AlertService){
-	$scope.loginData={email:'testperson@gmail.com',password:'test'};
+	$scope.loginData={email:'',password:''};
 	$scope.signupData={userName:'',password:'',email:'',passwordConfirmation:'',url_Id:'',server:'',farm:'',secret:''};
 
 	$scope.login = function(){

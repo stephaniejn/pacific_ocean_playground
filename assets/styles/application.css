@@ -3,9 +3,35 @@
 #background{
 	max-width: 100%;
 	height: auto;
+  border: 0;
 }
 
-.play-btn, #startGame {
+.semi-transparent-button {
+  display: inline-block;
+  font-size: 35px;
+  box-sizing: border-box;
+  margin-left: 80px;
+  margin-right: 80px;
+  padding: 20px;
+  max-width: 300px;
+ /* background: #fff;  fallback color for old browsers */
+  background: rgba(30, 52, 142, 0.5);
+  border-radius: 8px;
+  color: #fff;
+  text-shadow: 2px 3px 8px #000;
+  text-align: center;
+  letter-spacing: 1px;
+  transition: all 0.3s ease-out;
+  border: 3px solid rgba(30, 52, 142, 0.5);
+}
+
+.semi-transparent-button:active {
+  background: #fff;
+  color: #000;
+  transition: all 0.5s ease-in;
+}
+
+ #startGame {
   font-family: 'Rock Salt';
   font-size: 12px;
   letter-spacing: 1px;
@@ -23,7 +49,7 @@
 
 #overlay-text {
   font-family: "Permanent Marker";
-  font-size: 60px;
+  font-size: 65px;
   font-weight: 700;
   color: #0003DC;
   text-shadow: 2px 3px 8px #fff;
@@ -38,7 +64,7 @@
 .overlay {
   color:#fff;
   position:absolute;
-  z-index:12;
+  z-index:1;
   top:13%;
   left:0;
   width:100%;
@@ -46,7 +72,7 @@
 }
 
 #about-home{
-  background-color: #0003DC;
+  background-color: #384C95;
   padding-top: 30px;
   padding-bottom: 30px;
   color: white;
@@ -93,23 +119,97 @@
     width: auto;
 }
 
+/*Auth*/
+#login,#signup{
+  background-color: #4C5580;
+}
+
+.btn-auth{
+  font-size: 16px;
+}
+
 /*Games*/
 
-#knowledgeTitle, #question{
+#knowledgeTitle{
   margin-top: 60px;
   font-family: "Permanent Marker";
 }
 
+.question{
+  margin-top: 60px;
+  font-family: "Permanent Marker";
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+label{
+  font-size: 25px;
+  font-family: "Special Elite"
+}
+
+.go-image{
+  margin-top: 20px;
+  max-width: 170px;
+  height: auto;
+}
+
+.submit-image{
+  margin-top: 20px;
+  max-width: 100px;
+  height: auto;
+}
+
+label > input{ /* HIDE RADIO */
+  visibility: hidden; /* Makes input not-clickable */
+  position: absolute; /* Remove input from document flow */
+}
+label > input + img{ /* IMAGE STYLES */
+  cursor:pointer;
+  border:2px solid transparent;
+  display: inline;
+}
+label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
+  border:4px solid #f00;
+}
+
+.correct-text{
+  font-size: 16px;
+  color: purple;
+  font-family: "Rock Salt"
+}
+
+.incorrect-text{
+  font-size: 18px;
+  color: #005300;
+  font-family: "Rock Salt"
+}
+
+#question-image{
+  border: 3px solid white;
+  border-radius: 200px;
+}
 
 /*About Page*/
 
-#about-page{
-  padding-bottom: 30px;
+#about-header{
+  padding-bottom: 20px;
+  font-family: "Permanent Marker";
+  font-size: 55px;
 }
 
-#Stephanie-photo{
-  max-height: 300px;
-  max-width: 200px;
+.about-title{
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.about-text{
+  margin-top: 30px;
+}
+
+.about-photo{
+  width: 275px;
+  height: 275px;
+  border-radius: 275px;
 }
 
 /*Profile Page */
@@ -129,12 +229,33 @@
   float: right;
 }
 
-#email, #change-button{
+#email{
   margin-bottom: 20px;
+}
+
+#save-button{
+  margin-bottom: 20px;
+  padding: 14px 24px;
+  background-color: #682628;
+  font-size: 16px;
+}
+
+#click{
+  margin-top: 20px;
 }
 
 #change-button{
   margin-top: 20px;
+  float: center;
+  background-color: #0003DC;
+  font-size: 16px;
+  padding: 14px 20px;
+}
+
+.avatar{
+  width: 250px;
+  height: 250px;
+  border-radius: 250px;
 }
 
 /*Headers & Body */

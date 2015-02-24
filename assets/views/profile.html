@@ -12,20 +12,19 @@
 
 </div>
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-4 text-center">
         <p><strong>User Name: </strong>{{currentUser.userName}}</p>
         <p id="email"><strong>Email:</strong>{{currentUser.email}}</p>
-        {{scoreAverage}}
         <div ng-show="showAvatar">
-            <img ng-src= "https://farm{{farm}}.staticflickr.com/{{server}}/{{urlId}}_{{secret}}_n.jpg">
+            <img class="avatar" ng-src= "https://farm{{farm}}.staticflickr.com/{{server}}/{{urlId}}_{{secret}}_n.jpg">
         </div>
         <div ng-hide="showAvatar">
-            <img src= "https://farm{{currentUser.farm}}.staticflickr.com/{{currentUser.server}}/{{currentUser.urlId}}_{{currentUser.secret}}_n.jpg">
+            <img ng-show="existingAvatar" class="avatar" src= "https://farm{{currentUser.farm}}.staticflickr.com/{{currentUser.server}}/{{currentUser.urlId}}_{{currentUser.secret}}_n.jpg">
         </div>
-        <input type="button" id="change-button" class="btn btn-primary" value="Change Avatar" ng-click="avatar()"> 
+        <input type="button" id="change-button" class="btn btn-primary btn-lg" value="Avatar Selector" ng-click="avatar()"> 
         <div ng-show="showAvatar">
-        <button ng-click="save()" class="btn btn-primary" id="save-button">Save Avatar</button>
-            <p> Click until you find an avatar you like! </p>
+        <button ng-click="save()" class="btn btn-primary btn-lg" id="save-button">Save Avatar</button>
+            <p id="click"> Click until you find an avatar you like! </p>
         </div>
     </div>
 

@@ -22,12 +22,6 @@ oceanGame.controller('ProfileCtrl', ['$scope','$http','$modal','AlertService','$
 		var averagePerc = data.length > 0 ? (sum / (data.length*5)) : 0;
 		var average = Math.round(averagePerc * 100)
 
-
-		// object = {
-  //       	label: average + '%',
-  //       	percentage: averagePerc
-  //   	}
-
 		$scope.roundProgressData = {
         	label: average + '%',
         	percentage: averagePerc
@@ -54,6 +48,12 @@ oceanGame.controller('ProfileCtrl', ['$scope','$http','$modal','AlertService','$
 
 	})
 
+	if(UserService.currentUser.farm == ""){
+		$scope.existingAvatar = false
+	}else{
+		$scope.existingAvatar = true
+	}
+
 	$scope.count = 0
 
 	$scope.showAvatar = false
@@ -76,6 +76,8 @@ oceanGame.controller('ProfileCtrl', ['$scope','$http','$modal','AlertService','$
 
 	$scope.save = function(){
 
+		$scope.existingAvatar = true;
+
 		var avatarData = {
 			urlId:$scope.urlId,
 			farm:$scope.farm,
@@ -85,7 +87,6 @@ oceanGame.controller('ProfileCtrl', ['$scope','$http','$modal','AlertService','$
 		
 		$http.put('/api/user/'+$scope.currentUser.id,avatarData)
 		.success(function(data){
-			AlertService.add('success', 'Avatar saved')
 			$scope.currentUser.urlId = $scope.urlId
 			$scope.currentUser.farm = $scope.farm
 			$scope.currentUser.secret = $scope.secret
