@@ -136,7 +136,7 @@
 
 #score-text{
   font-family: "Rock Salt"
-  
+
 }
 
 #knowledgeTitle{
@@ -287,5 +287,53 @@ body{
   font-family: "Special Elite"
 }
 
+.media-buttons{
+  display: none;
+}
 
+.media-header{
+  display: none;
+}
+
+/*Media Queries*/
+@media (max-width: 900px) {
+
+  .navbar{
+    z-index: 2;
+  }
+
+  canvas{
+    display: block;
+    margin: 0 auto;
+  }
+
+  .standard-header{
+    display: none
+  }
+
+  .media-header{
+  display: block;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  }  
+ 
+  #overlay-text {
+    padding-top: 20px;
+    font-size: 50px;
+    font-weight: 500;
+  }
+  .semi-transparent-button {
+  display: none;
+  }
+  .media-buttons{
+    display: block;
+  }
+  .btn-media{
+    margin-left: 10px;
+    margin-right: 10px;
+    display: inline-block;
+    color: #0003DC;
+    font-family: "Special Elite";
+  }
+}
 
