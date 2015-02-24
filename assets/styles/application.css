@@ -84,6 +84,10 @@
 
 /*Navbar */
 .auth-label{
+  font-size: 18px !important;
+}
+
+#signup-label{
   font-size: 18px;
 }
 
