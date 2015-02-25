@@ -193,6 +193,7 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
   color: purple;
   font-family: "Rock Salt";
   padding-bottom: 30px;
+  text-align: center;
 }
 
 .incorrect-text{
@@ -200,6 +201,7 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
   color: #005300;
   font-family: "Rock Salt";
   padding-bottom: 30px;
+  text-align: center;
 }
 
 #question-image{
