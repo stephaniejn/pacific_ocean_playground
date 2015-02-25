@@ -1,6 +1,7 @@
 <div class="intro" ng-show="!inProgress">
 	<h1 id="knowledgeTitle"> Ready to Test Your Knowledge of the Pacific Ocean? </h1>
-	<div class='col-md-3 col-md-offset-4'>
+	<p class="login-text"> Make sure you're logged in so you can track your progress!</p>
+	<div class='col-md-3 col-md-offset-4 text-center'>
 	<img class="go-image" ng-click="start()" src="/images/go.png"/>
 	</div>
 </div>
@@ -23,16 +24,18 @@
 			</ul>
 		</div>
 		<div class="row">
-			<div class="col-md-2" id="score">
-					<h3 id="score-text"> Score: {{score}} </h3>
-					<span class="correct-text" ng-show="!answerMode && correctAns">Correct! Good job!</span>
-					<span class="incorrect-text" ng-show="!answerMode && !correctAns">Incorrect, better luck next time!</span>
-			</div>
-			<div class="col-md-6 col-md-offset-1 text-center" ng-show="answerMode" >
+			<div class="col-md-6 col-md-offset-3 text-center" ng-show="answerMode" >
 				<img ng-click="checkAnswer()" class="submit-image" ng-click="start()" src="/images/submit.png"/>
 			</div>
-			<div class="col-md-6 col-md-offset-1 text-center" ng-show="!answerMode">
+			<div class="col-md-6 col-md-offset-3 text-center" ng-show="!answerMode">
 				<img class="submit-image"  ng-click="nextQuestion(); saveScore();" src="/images/next.png"/>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3 text-center" id="score">
+				<h3 id="score-text"> Score: {{score}} </h3>
+				<span class="correct-text" ng-show="!answerMode && correctAns">Correct! Good job!</span>
+				<span class="incorrect-text" ng-show="!answerMode && !correctAns">Incorrect, better luck next time!</span>
 			</div>
 		</div>
 	</div>

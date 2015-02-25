@@ -139,6 +139,12 @@
 
 }
 
+.login-text{
+  margin-top: 40px;
+  font-size: 22px;
+  text-align: center;
+}
+
 #knowledgeTitle{
   margin-top: 60px;
   font-family: "Permanent Marker";
@@ -157,6 +163,7 @@ label{
 }
 
 .go-image{
+  display: inline-block;
   margin-top: 20px;
   max-width: 170px;
   height: auto;
@@ -182,20 +189,26 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
 }
 
 .correct-text{
-  font-size: 16px;
+  font-size: 20px;
   color: purple;
-  font-family: "Rock Salt"
+  font-family: "Rock Salt";
+  padding-bottom: 30px;
 }
 
 .incorrect-text{
-  font-size: 18px;
+  font-size: 20px;
   color: #005300;
-  font-family: "Rock Salt"
+  font-family: "Rock Salt";
+  padding-bottom: 30px;
 }
 
 #question-image{
   border: 3px solid white;
   border-radius: 200px;
+}
+
+.animated.infinite{
+  padding-bottom: 40px;
 }
 
 /*About Page*/
@@ -332,6 +345,7 @@ body{
   .btn-media{
     margin-left: 10px;
     margin-right: 10px;
+    margin-bottom: 15px;
     display: inline-block;
     color: #0003DC;
     font-family: "Special Elite";
