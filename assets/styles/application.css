@@ -157,6 +157,13 @@
   text-align: center;
 }
 
+.question-cards{
+  margin-top: 30px;
+  font-family: "Permanent Marker";
+  margin-bottom: 40px;
+  text-align: center;
+}
+
 label{
   font-size: 25px;
   font-family: "Special Elite"
