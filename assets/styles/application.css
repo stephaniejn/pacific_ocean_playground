@@ -160,7 +160,7 @@
 .question-cards{
   margin-top: 30px;
   font-family: "Permanent Marker";
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   text-align: center;
 }
 
@@ -251,8 +251,8 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
 /*Profile Page */
 
 .row{
-  margin-top: 30px;
-  margin-bottom: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 #profile-header{
