@@ -23,7 +23,7 @@ module.exports = {
 		})
 	},
 	image_data: function(req, res){
-		request(('https://api.flickr.com/services/rest/?method=flickr.groups.pools.getPhotos&api_key='+FLICKR_OCEAN_KEY+'&group_id=553301@N20&format=json&nojsoncallback=1'), function(error, response, body){
+		request(('https://api.flickr.com/services/rest/?method=flickr.groups.pools.getPhotos&api_key='+FLICKR_OCEAN_KEY+'&group_id=553301@N20&tags=mammal&format=json&nojsoncallback=1'), function(error, response, body){
 			if (!error && response.statusCode == 200) {
     			var result = JSON.parse(body)
     			res.send(result)
