@@ -20,7 +20,7 @@ oceanGame.controller('HomeCtrl', ['$scope','$http','$modal','AlertService','$loc
 		for( var i = 0; i<data.length; i++ ){
 			$scope.users = data
 			console.log(data[i].total)
-			if(data[i].total){
+			if(data[i].total != 0){
 				$scope.existing_user = true
 			}	
 		}
