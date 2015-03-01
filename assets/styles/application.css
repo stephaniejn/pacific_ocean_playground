@@ -237,7 +237,7 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
 }
 
 .animated.infinite{
-  padding-bottom: 40px;
+  padding-bottom: 15px;
 }
 
 /*About Page*/
