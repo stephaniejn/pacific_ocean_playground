@@ -28,6 +28,12 @@ module.exports = {
   		type:'string',
   		required:true
   	},
+    total:{
+      type:'integer'
+    },
+    total2:{
+      type:'integer'
+    },
     farm:{
       type:'string'
     },

@@ -3,7 +3,6 @@ oceanGame.controller('ProfileCtrl', ['$scope','$http','$modal','AlertService','$
 	$scope.UserService = UserService;
 	$scope.$watchCollection('UserService',function(){
 		$scope.currentUser = UserService.currentUser
-		// console.log($scope.currentUser.id)
 		if ($scope.currentUser == false){
 			AlertService.add('danger', 'Please log in to view your profile')
 			$location.path( "/" )
@@ -12,6 +11,8 @@ oceanGame.controller('ProfileCtrl', ['$scope','$http','$modal','AlertService','$
 
 	var self=this;
 
+	var averagePerc= 0;
+
 	$http.get('/api/user/'+UserService.currentUser.id+'/scores')
 	.success(function(data){
 		var sum = 0;
@@ -19,14 +20,13 @@ oceanGame.controller('ProfileCtrl', ['$scope','$http','$modal','AlertService','$
    		 	sum += data[i].score;
 		}
 
-		var averagePerc = data.length > 0 ? (sum / (data.length*5)) : 0;
+		averagePerc = data.length > 0 ? (sum / (data.length*5)) : 0;
 		var average = Math.round(averagePerc * 100)
 
 		$scope.roundProgressData = {
         	label: average + '%',
         	percentage: averagePerc
     	}
-
 	})
 
 	var self=this;

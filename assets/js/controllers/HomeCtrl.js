@@ -9,17 +9,21 @@ oceanGame.controller('HomeCtrl', ['$scope','$http','$modal','AlertService','$loc
 		input:""
 	}
 
-	$scope.showWeather = false
+	$scope.users = []
 
-	$scope.weather = function() {
-		$scope.showWeather = true
-		   // var req = {
-     //        url: '/api/data',
-     //        params: {}
-     //    }
-    	$http.post('/api/data', $scope.api_data).success(function(data){
-          $scope.data = data
-        })
-	}
+	var self=this;
+
+	$scope.existing_user = false
+
+	$http.get('/api/user')
+	.success(function(data){
+		for( var i = 0; i<data.length; i++ ){
+			$scope.users = data
+			console.log(data[i].total)
+			if(data[i].total){
+				$scope.existing_user = true
+			}	
+		}
+	})
 	
 }])

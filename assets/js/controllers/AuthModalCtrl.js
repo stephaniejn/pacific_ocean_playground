@@ -26,6 +26,8 @@ oceanGame.controller('AuthModalCtrl', ['$scope', 'UserService', '$http', '$modal
 			password:$scope.signupData.password,
 			userName:$scope.signupData.userName,
 			firstName:$scope.signupData.firstName,
+			total:0,
+			total2:0,
 			url_Id:'',
 			server:'',
 			farm:'',

@@ -31,3 +31,27 @@
 		</p>
 	</div>
 </div>
+
+<div id="leaderboard">
+	<div class="container" ng-if="existing_user">
+		<h2 id="leaderboard-title"> Leader Board </h2>
+		<div class="row">
+			<div ng-repeat="user in users | orderBy: '-(total+total2)' | limitTo: 4" ng-if="user.total != 0"> 
+				<div class="leaderboard-box col-md-3 col-s-3 text-center">
+					<h3><strong> {{user.userName}} </strong></h3>
+					<div class="total-scores">
+						<p ng-show="user.total">Knowledge Quiz: {{user.total}}%</p> 
+					</div>
+					<div class ="total-scores">
+						<p ng-show="user.total2">Guess the Creature: {{user.total2}}%</p>
+					</div>
+					<div class="text-center"> 
+						<img class="avatar-home" ng-if="user.farm" ng-src= "https://farm{{user.farm}}.staticflickr.com/{{user.server}}/{{user.urlId}}_{{user.secret}}_n.jpg"> 
+						<img class="avatar-home" ng-hide="user.farm" ng-src= "/images/person-placeholder.png"> 
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
