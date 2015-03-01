@@ -33,11 +33,11 @@
 </div>
 
 <div id="leaderboard">
-	<div class="container" ng-if="existing_user">
+	<div class="container">
 		<h2 id="leaderboard-title"> Leader Board </h2>
 		<div class="row">
 			<div ng-repeat="user in users | orderBy: '-(total+total2)' | limitTo: 4" ng-if="user.total != 0"> 
-				<div class="leaderboard-box col-md-3 col-s-3 text-center">
+				<div class="leaderboard-box col-md-3 col-s-3 text-center" ng-if="existing_user">
 					<h3><strong> {{user.userName}} </strong></h3>
 					<div class="total-scores">
 						<p ng-show="user.total">Knowledge Quiz: {{user.total}}%</p> 
