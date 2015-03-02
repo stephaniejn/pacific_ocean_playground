@@ -277,7 +277,7 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
 
 #profile-header{
   font-family: "Permanent Marker";
-  font-size: 60px;
+  font-size: 55px;
   margin-top: 45px;
 }
 
@@ -359,6 +359,11 @@ body{
 }
 
 @media (max-width: 900px) {
+
+  #profile-header{
+    font-size: 40px;
+    margin-top: 25px;
+  }
 
   .navbar{
     z-index: 2;
