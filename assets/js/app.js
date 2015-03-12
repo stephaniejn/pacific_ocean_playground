@@ -33,6 +33,6 @@ oceanGame.config(['$routeProvider','$locationProvider', function($routeProvider,
 
 oceanGame.run(['UserService', function(UserService){
 	UserService.check(function(err,data){
-		console.log('check',err,data);
+		// console.log('check',err,data);
 	});
 }]);
